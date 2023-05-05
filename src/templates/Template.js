@@ -3,9 +3,9 @@ import github from '@images/github.png';
 import instagram from '@images/instagram.png';
 import twitter from '@images/twitter.png'
 
-
+let data;  
 const Template = async () => {
-  const data = await getData();
+  data = await getData();
   const view = `
     <div class="About">
       <div class="card">
@@ -37,10 +37,11 @@ const Template = async () => {
             <img src="${instagram}" />
           </a>
         </div>
+        <a id="download">Download info!</a>
       </div>
     </div>
   `;
   return view;
 };
 
-export default Template;
+export {Template, data} ;
